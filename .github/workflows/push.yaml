@@ -1,4 +1,4 @@
-name: GitHub Actions goblin-doc
+name: GitHub Actions fofax-doc
 on:
   push:
     branches:
