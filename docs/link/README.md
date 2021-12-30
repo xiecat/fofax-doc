@@ -3,7 +3,7 @@
 ## [httpx](https://github.com/projectdiscovery/httpx)
 
 ```shell
-
+fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/migrate/export" -status-code -mc 200 -ms '{"Counsumers":[],"Routes'
 ```
 ## [nuclei](https://github.com/projectdiscovery/nuclei)
 
