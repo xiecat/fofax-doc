@@ -42,8 +42,9 @@ FoFa input Query of: app=Grafana #程序实际接收的内容
 2021/12/30 19:49:04 [DEBUG] Fofa Api Query: app=Grafana   ## fofa api返回的语句
 2021/12/30 19:49:04 [SUCC] Fetch Data From FoFa: [0/0]
 ```
-
+::: warning
 如果想复制完整链接可以加 `-sp` 参数来显示邮箱和 key
+:::
 
 ### 查看语句语法树
 
