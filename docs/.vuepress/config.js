@@ -16,6 +16,7 @@ module.exports = {
             { text: '主页', link: '/' },
             { text: '开始', link: '/guide/' },
             { text: 'Fx', link: '/fx/' },
+            { text: '联动工具', link: '/link/' },
             { text: 'FAQ', link: '/faq/' },
         ],
         // 默认值是 true 。设置为 false 来禁用所有页面的 下一篇 链接
@@ -31,6 +32,9 @@ module.exports = {
             ],
             '/fx/': [
              '',
+            ],
+            '/link/': [
+                '',
             ],
             '/faq/': [
                 '',
