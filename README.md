@@ -1,4 +1,4 @@
-# Goblin 使用文档
+# fofax 使用文档
 
 请访问 [https://fofax.xiecat.fun/](https://fofax.xiecat.fun)
 欢迎一起完善文档
