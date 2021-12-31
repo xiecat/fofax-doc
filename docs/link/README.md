@@ -22,6 +22,7 @@ echo 'login' | fofax -fs 100 -e -ec | httpx -o 123.txt && xray ws ss --uf 123.tx
 ```shell
 xray ws ss --uf <(echo 'login' | fofax -fs 100 -e -ec -ffi )
 ```
+@becivells 提供
 ## [observer_ward](https://github.com/0x727/ObserverWard_0x727)
 
 ```shell
