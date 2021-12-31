@@ -24,8 +24,13 @@ xray ws ss --uf <(echo 'login' | fofax -fs 100 -e -ec -ffi )
 ```
 ## [observer_ward](https://github.com/0x727/ObserverWard_0x727)
 
-2. observer_ward_darwin
 ```shell
 echo 'login' | fofax -fs 100 -e -ec -ffi |./observer_ward_darwin --stdin
 ```
 [@0x727](https://github.com/0x727) 提供
+
+## dismap
+```shell
+dismap -file <(fofax -q "fx=flash-phishing" -fe|httpx)
+fofax -q "fx=flash-phishing" -fe>result.txt&&dismap -file result.txt
+```
