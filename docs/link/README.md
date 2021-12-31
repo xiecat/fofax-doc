@@ -8,13 +8,15 @@ fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/mig
 ## [nuclei](https://github.com/projectdiscovery/nuclei)
 
 ```shell
-
+fofax -q 'fx=kubernetes' -fe |httpx|nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
+echo 'fx=kubernetes'| fofax  -fe |httpx|nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
+echo 'fx=kubernetes'| fofax  -fe  -ffi|nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
+echo 'app="kubernetes"'|fofax|httpx|nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
 ```
-
 ## [xray](https://github.com/chaitin/xray)
 
 ```shell 
-echo 'login' | fofax -fs 100 -e -ec | httpx -o 123.txt | xray ws ss --uf 123.txt
+echo 'login' | fofax -fs 100 -e -ec | httpx -o 123.txt && xray ws ss --uf 123.txt
 ```
 @荋丶 提供
 ```shell
