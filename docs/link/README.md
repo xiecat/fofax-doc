@@ -29,7 +29,7 @@ echo 'login' | fofax -fs 100 -e -ec -ffi |./observer_ward_darwin --stdin
 ```
 [@0x727](https://github.com/0x727) 提供
 
-## dismap
+## [dismap](https://github.com/zhzyker/dismap/)
 ```shell
 dismap -file <(fofax -q "fx=flash-phishing" -fe|httpx)
 fofax -q "fx=flash-phishing" -fe>result.txt&&dismap -file result.txt
