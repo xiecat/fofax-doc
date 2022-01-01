@@ -93,7 +93,7 @@ fofax -fs 5 -uc https://www.baidu.com/
 fofax -ucf cert_url.txt 
 ```
 
-## 从 fofa.so 里导出的数据中读取
+## 从 fofa.so 导出的数据中读取
 
 ```
 fofax -fcf test.csv  -fs 2 
@@ -101,9 +101,6 @@ fofax -fcf test.csv  -fs 2 -ffi
 fofax -fcf test.json  -fs 2 
 fofax -fcf test.json  -fs 2 -ffi
 ```
+此功能不会对 fofa 的 api 进行请求
 
 
-
-
-
-#### 

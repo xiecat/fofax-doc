@@ -5,7 +5,7 @@
 
 ### MacOS/Linux
 
-将下载下来的 fofax 压缩包解压，建议放在 `/usr/local/bin/` 目录下，以达到任意目录都可以运行 fofax 命令的目的。
+将下载下来的 fofax 压缩包解压放在 `/usr/local/bin/` 目录下
 
 ```console
 tar -zxvf ~/Downloads/fofax_v0.1.11_darwin_amd64.tar.gz -C /usr/local/bin/
@@ -17,7 +17,7 @@ tar -zxvf ~/Downloads/fofax_v0.1.11_darwin_amd64.tar.gz -C /usr/local/bin/
 
 解压压缩包，第一次运行 fofax.exe 会在同级目录下生成一个 fofax.yaml 的配置文件
 
-##配置
+## 配置
 
 可以使用环境变量、命令行、参数进行配置，
 
@@ -48,7 +48,7 @@ fofakey: ***************
 
 ## 配置文件的读取顺序
 
-为了适应不同操作系统用户的使用习惯 fofax 对配置生成的进行了优化调整。主要分为两类操作系统。一类 windows 另一类就是unix/linux为主的操作系统。不论是 windows 还是非 win 配置文件查找顺序都是不变的分别为
+为了适应不同操作系统用户的使用习惯 fofax 对配置生成的进行了优化调整。主要分为两类操作系统。一类 windows 另一类就是 unix/linux 为主的操作系统。不论是 windows 还是非 win 配置文件查找顺序都是不变的分别为
 
 ```
 fofax.yaml  # 命令行当前目录

@@ -4,7 +4,7 @@
 
 [:pushpin: Releases Download](https://github.com/xiecat/fofax/releases)
 
-
+## 功能特点
 fofax 是一款使用 go 编写的命令行 fofa 查询工具，在支持fofa查询规则上增加了 fx 语法来方便使用者编写自己的规则，并且内置了一些常用的规则，除此之外还有联动其他安全产品在内的其他多个实用功能。主要的功能如下：
 
 - 基本 FOFA 语法查询
@@ -21,6 +21,6 @@ fofax 是一款使用 go 编写的命令行 fofa 查询工具，在支持fofa查
 
 
 
-## 0x06 Stargazers
+## Stargazers
 
 [![Stargazers over time](https://starchart.cc/xiecat/fofax.svg)](https://starchart.cc/xiecat/fofax)
