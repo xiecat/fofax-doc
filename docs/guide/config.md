@@ -3,8 +3,6 @@
 
 点击 [Releases下载链接](https://github.com/xiecat/fofax/releases) ，按照自己的系统架构选择相应的发行版本下载。
 
-##配置
-
 ### MacOS/Linux
 
 将下载下来的 fofax 压缩包解压，建议放在 `/usr/local/bin/` 目录下，以达到任意目录都可以运行 fofax 命令的目的。
@@ -13,28 +11,28 @@
 tar -zxvf ~/Downloads/fofax_v0.1.11_darwin_amd64.tar.gz -C /usr/local/bin/
 ```
 
-
 第一次运行 fofax 命令会自动生成一个配置文件，位于 `~/.config/fofax/fofax.yaml`。
 
-```console
-fofax
+### Windows
 
-      ____        ____       _  __
-     / __/____   / __/____ _| |/ /
-    / /_ / __ \ / /_ / __ `/|   /
-   / __// /_/ // __// /_/ //   |
-  /_/   \____//_/   \__,_//_/|_|
-                              
-                         fofax.xiecat.fun
+解压压缩包，第一次运行 fofax.exe 会在同级目录下生成一个 fofax.yaml 的配置文件
 
-2021/12/23 21:21:28 [SUCC] create config file /Users/user/.config/fofax/fofax.yaml. please modify and use
+##配置
+
+可以使用环境变量、命令行、参数进行配置，
+
+### 环境变量配置
+
+```
+FOFA_EMAIL=xxx@xxx.xx
+FOFA_KEY=xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-接下来就是对此配置文件进行配置了，一般来说只需要配置完 `email` 和 `key` 就可以了。
+环境变量配置后 `fofax -h` 会看到默认参数中有此值
 
-```console
-vim ~/.config/fofax/fofax.yaml
-```
+### 文件配置
+
+一般来说只需要配置完 `email` 和 `key` 就可以了。
 
 ```console
 # fofa api email
@@ -44,13 +42,39 @@ fofa-email: ******@gmail.com
 fofakey: ***************
 ```
 
-### Windows
-
-解压压缩包，第一次运行 fofax.exe 会在同级目录下生成一个 fofax.yaml 的配置文件。然后打开此配置文件，并填写 `email` 和 `key`。
-
 ### 使用 Tips
 
 不带任何参数时，除了会输出 ASCII Logo，还会随机输出一条使用 Tips。
+
+## 配置文件的读取顺序
+
+为了适应不同操作系统用户的使用习惯 fofax 对配置生成的进行了优化调整。主要分为两类操作系统。一类 windows 另一类就是unix/linux为主的操作系统。不论是 windows 还是非 win 配置文件查找顺序都是不变的分别为
+
+```
+fofax.yaml  # 命令行当前目录
+~/.config/fofax/fofax.yaml # 用户家目录下的.config/fofax 
+/etc/fofax/fofax.yaml # linux下的配置目录
+/etc/fofax.yaml # linux下的配置目录
+```
+
+### windows
+
+大部分 windows 用户在使用工具的时候通常会把工具配置等放到一个单独的文件夹来使用。fofax 默认的也是这样。但是对于习惯配置文件和二进制分开的用户也有提供使用方法，如需要调整可以在家目录下创建`.config/fofax/`并把`fofax.yaml` 移动至此目录
+
+### unix/linux
+
+这类用户受 linux 等影响会把配置文件和二进制文件分开。程序生成的默认配置文件路径为 `~/.config/fofax/fofax.yaml` 。如果当前目录有 `fofax.yaml`  会优先读取 `fofax.yaml` 
+
+### 配置文件排查
+
+如果你不知道程序使用的配置文件在哪可以使用 `fofa -h` 命令 config 参数里默认的值即为当前使用的配置文件
+
+```
+OTHER OPTIONS:
+   -config string  fofax configuration file.The file reading order(fofax.yaml,/Users/user/.config/fofax/fofax.yaml,/etc/fofax/fofax.yaml,/etc/fofax.yaml) (default "/Users/user/.config/fofax/fofax.yaml")
+```
+
+
 
 
 
