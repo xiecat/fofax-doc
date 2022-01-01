@@ -30,6 +30,7 @@ module.exports = {
             '/guide/': [
                 '',
                 'config',
+                'fast',
                 'input',
                 'filter',
                 'output',

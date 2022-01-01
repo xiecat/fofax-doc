@@ -1,4 +1,4 @@
-# 快速使用
+# 下载和配置
 ## 下载
 
 点击 [Releases下载链接](https://github.com/xiecat/fofax/releases) ，按照自己的系统架构选择相应的发行版本下载。
