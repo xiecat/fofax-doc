@@ -21,6 +21,6 @@ fofax 是一款使用 go 编写的命令行 fofa 查询工具，在支持fofa查
 
 
 
-## Stargazers
+Stargazers
 
 [![Stargazers over time](https://starchart.cc/xiecat/fofax.svg)](https://starchart.cc/xiecat/fofax)
