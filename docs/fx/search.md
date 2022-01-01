@@ -1,4 +1,4 @@
-# 规则文件的查询和使用
+# fx 规则的查询和使用
 
 
 
@@ -28,7 +28,7 @@ fofax -q 'fx="redis-unauth"'  -fe -fs 2
 fofax -l
 ```
 
-## 模糊搜索特定的 fx 语句
+## 搜索 fx 规则
 
 ```
 fofax -s 'unauth'
@@ -59,7 +59,7 @@ fofax -s 'tag=unauth'
 fofax -s 'tag=unauth;r=Ju'
 ```
 
-## 显示某一条 fx 语句的详情
+## 显示 fx 规则详情
 
 使用 `-ss` 参数可以接受的内容为 `id`  的值或者`query`的值
 
@@ -75,7 +75,7 @@ fofax -ss "fx-2021-1015"
 fofax -ss "redis-unauth"
 ```
 
-## 显示所有存在的 tag
+## 列出 tag
 
 ```
 fofax -lt
