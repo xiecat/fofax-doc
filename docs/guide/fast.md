@@ -48,6 +48,7 @@ SINGLE QUERY/CERT/ICON:
 MULTIPLE QUERY/CERT/ICON:
    -fcf, -fofa-coin-file string      Load files downloaded with fofa coins (only use -ffi -fs or not)
    -qf, -query-file string           Load files, query multiple statements
+   -qx, -query-fx string             Find all statements from the fx rules
    -ucf, -url-cert-file string       Read the URL from the file, calculate the cert and then query it
    -iuf, -icon-hash-url-file string  Retrieve the URL from the file, calculate the icon hash and query it
 
