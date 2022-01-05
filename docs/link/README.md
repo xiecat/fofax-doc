@@ -33,9 +33,11 @@ echo 'fx=kubernetes' | fofax  -fe  -ffi | nuclei -t ~/nuclei-templates/misconfig
 ## [xray](https://github.com/chaitin/xray)
 
 > 感谢@荋丶 、@becivells两位师傅提供。
-
+```shell
+echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 100 -e -ec | httpx -o shiro.txt && xray ws ss --uf shiro.txt
+```
 ```shell 
-./xray --log-level fatal ws --plugins shiro --uf <(echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 10 -ffi -ec -e)
+./xray --log-level fatal ws --plugins shiro --uf <(echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 10 -ffi -ec )
 ```
 ![fofax_xray](../.vuepress/public/fofax&xray.png)
 ## [observer_ward](https://github.com/0x727/ObserverWard_0x727)

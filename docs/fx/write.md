@@ -41,7 +41,9 @@ tag:
 - redteam
 source: 
 ```
-
+::: warning
+请务必保证 query 和 id 的全局唯一性,两者都不可以重复。如果提交到 fofax, fofax 内部会有自己的编号。如果只是自己使用可以使用 fx-0000-xxxx 类似的编号。编号必须以 fx 开头。
+:::
 ## 移动文件到`fxrules`
 
 在编写完成后请放在 `fxrules` 所在的目录。
