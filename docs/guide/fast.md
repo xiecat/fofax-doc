@@ -9,7 +9,7 @@ fofax [option] [input] [filter] [output]
 
 
 ```shell 
-fofax [[-email -key]/-config] [-q/-uc/-iu/-if/-fcf/-qf/-ucf/-iuf] [-fs/-e/-ec] [-ffi/-fto/-ff]
+fofax [[-email -key]/-config] [-q/-uc/-iu/-if/-fcf/-qf/-ucf/-iuf] [-fs/-i/-ec] [-ffi/-fto/-ff]
 ```
 这里先简单介绍一下。后续会分别介绍输入源、输出格式、过滤参数
 ```shell
@@ -19,7 +19,7 @@ Usage:
 Flags:
 CONFIGS:
    -email, -fofa-email string  Fofa API Email 
-   -key, -fofakey string       Fofa API Key
+   -key, -fofakey string       Fofa API Key 
    -p, -proxy string           proxy for http like http://127.0.0.1:8080
    -fofa-url string            Fofa url (default "https://fofa.so")
    -debug                      Debug mode
@@ -30,6 +30,7 @@ CONFIGS:
 FILTERS:
    -fs, -fetch-size int      The maximum number of query (default 100)
    -e, -exclude              Exclude the honeypot.
+   -i, -include              Include the honeypot.
    -ec, -exclude-country-cn  Exclude CN.
 
 OUTPUT FORMAT:
@@ -119,10 +120,10 @@ echo 'app="APACHE-Solr"' | fofax -fs 5
 :::
 ## 排除查询
 
-添加 `-e` 参数，排除蜜罐的干扰。
+添加 `-i` 参数，其中包含蜜罐的数据。
 
 ```console
-echo 'app="APACHE-Solr"' | fofax -fs 10 -e
+echo 'app="APACHE-Solr"' | fofax -fs 10 -i
 2021/12/23 22:56:14 [SUCC] Fetch Data From FoFa: [10/30849]
 13.126.128.253:80
 185.22.235.14:8983

@@ -3,6 +3,12 @@
 
 点击 [Releases下载链接](https://github.com/xiecat/fofax/releases) ，按照自己的系统架构选择相应的发行版本下载。
 
+或者使用
+
+```shell
+go install -v github.com/xiecat/fofax/cmd/fofax@latest
+```
+
 ### MacOS/Linux
 
 将下载下来的 fofax 压缩包解压放在 `/usr/local/bin/` 目录下
@@ -73,7 +79,6 @@ fofax.yaml  # 命令行当前目录
 OTHER OPTIONS:
    -config string  fofax configuration file.The file reading order(fofax.yaml,/Users/user/.config/fofax/fofax.yaml,/etc/fofax/fofax.yaml,/etc/fofax.yaml) (default "/Users/user/.config/fofax/fofax.yaml")
 ```
-
 
 
 

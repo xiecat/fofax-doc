@@ -45,7 +45,7 @@ echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 100 -e -
 > 感谢[@0x727](https://github.com/0x727)开源团队提供。
 
 ```shell
-echo 'login' | fofax -fs 100 -e -ec -ffi | ./observer_ward_darwin --stdin
+echo 'login' | fofax -fs 100  -ec -ffi | ./observer_ward_darwin --stdin
 ```
 ![fofax_observer_ward](../.vuepress/public/fofax&observer_ward.png)
 
