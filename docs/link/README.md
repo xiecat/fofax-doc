@@ -51,8 +51,16 @@ echo 'login' | fofax -fs 100  -ec -ffi | ./observer_ward_darwin --stdin
 
 ## [dismap](https://github.com/zhzyker/dismap/)
 
-```shell
-dismap -file <(fofax -q "fx=flash-phishing" -fe|httpx)
+```
+./dismap -file <(echo 'title="login"' | fofax -fs 10 -ffi)
 ```
 
 ![fofax_dismap](../.vuepress/public/fofax&dismap.png)
+
+## [naabu](https://github.com/projectdiscovery/naabu)
+
+ ```bash
+ echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -ff 'domain' -fs 10 | naabu
+ ```
+
+![fofax_naabu](../.vuepress/public/fofax&naabu.png)
