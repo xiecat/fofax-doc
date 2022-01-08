@@ -4,15 +4,15 @@
 
 ### Windows
 
-Windows系统下，首次运行`fofax.exe`，会在当前同级目录下生成配置文件`fofax.yaml`和fx规则配置文件`fxrules`文件夹。同级目录下的配置文件优先读取。
+Windows系统下，首次运行 `fofax.exe`，会在当前同级目录下生成配置文件 `fofax.yaml` 和 Fx 规则配置文件 `fxrules` 文件夹。同级目录下的配置文件优先读取。
 
-如果同级目录下没有配置文件，则会去读取用户家目录下的`.config/fofax/`目录中的配置文件：
+如果同级目录下没有配置文件，则会去读取用户家目录下的 `.config/fofax/` 目录中的配置文件：
 
 ![Windows_conf](../.vuepress/public/Windows-conf.png)
 
 ### Linux/macOS
 
-类Unix系统，在首次运行`fofax`的时候，会在位于 `~/.config/fofax/`目录生成配置文件。
+类 Unix 系统，在首次运行 `fofax` 的时候，会在位于 `~/.config/fofax/` 目录生成配置文件。
 
 ```shell
 fofax
@@ -28,18 +28,18 @@ fofax
 2021/12/23 21:21:28 [SUCC] create config file /Users/user/.config/fofax/fofax.yaml. please modify and use
 ```
 
-## Windows下的转义问题
+## Windows 下的转义问题
 
-在Windows下使用一定要注意转义，Windows终端中输入`"`不加转义会消失。
+在 Windows 下使用一定要注意转义，Windows 终端中输入 `"` 不加转义会消失。
 
 ```shell
 fofax.exe -q 'app="APACHE-Solr"' 		# 输入的内容
 FoFa input Query of: app=Grafana 		#程序实际接收的内容
 ```
 
-解决这个问题需要转义，可以添加`-debug`开启详细调试模式。并且在Windows系统上，使用不同的终端软件，命令也是有所不同。
+解决这个问题需要转义，可以添加 `-debug` 开启详细调试模式。并且在 Windows 系统上，使用不同的终端软件，命令也是有所不同。
 
-在CMD终端上，`-q`后面不可以添加单引号`'`。
+在CMD终端上，`-q` 后面不可以添加单引号 `'`。
 
 ```cmd
 fofax.exe -q app=\"APACHE-Solr\" -fs 5
@@ -47,7 +47,7 @@ fofax.exe -q app=\"APACHE-Solr\" -fs 5
 
 ![Windows_cmd](../.vuepress/public/windows-cmd.png)
 
-而在PowerShell上，`-q`后面不仅需要添加单引号，而且对于双引号也要进行转义。
+而在 PowerShell 上，`-q` 后面不仅需要添加单引号，而且对于双引号也要进行转义。
 
 ```powershell
 fofax.exe -q 'app=\"APACHE-Solr\"' -fs 5
@@ -64,11 +64,11 @@ fofax.exe -q 'app=\"APACHE-Solr\"' -fs 5
 2021/12/30 19:53:47 [ERRO] FoFa Response ErrMsg: 查询语法错误
 ```
 
-一般有两种犯错情况。第一种是使用Fx语句未加`-fe`参数；第二种自己写的语句有问题，可以添加`-open`参数到fofa网站上看看。
+一般有两种犯错情况。第一种是使用 Fx 语句未加 `-fe` 参数；第二种自己写的语句有问题，可以添加 `-open` 参数到 FoFa 网站上看看。
 
-## debug信息
+## debug 信息
 
-### 查看debug信息
+### 查看 debug 信息
 
 ```bash
 fofax -q 'app="Grafana"' -debug
@@ -80,7 +80,7 @@ fofax -q 'app="Grafana"' -debug
 2021/12/30 19:49:04 [SUCC] Fetch Data From FoFa: [0/0]
 ```
 ::: warning
-如果想复制完整链接，可以加`-sp`参数来显示email和key。
+如果想复制完整链接，可以加 `-sp` 参数来显示 `email` 和 `key`。
 :::
 
 ### 查看语句语法树

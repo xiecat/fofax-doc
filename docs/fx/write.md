@@ -1,4 +1,4 @@
-# 编写 fx 语句
+# 编写 Fx 语句
 
 ## 生成模板文件
 
@@ -25,7 +25,7 @@ tag:
 source: 语句来源
 ```
 
-按照如上说明，修改相应内容，编写一个新的 fx 语法规则
+按照如上说明，修改相应内容，编写一个新的 Fx 语法规则
 
 为方便复制，详细内容如下（注意 title 处填写自己的目标名）：
 
@@ -42,22 +42,24 @@ tag:
 source: 
 ```
 ::: warning
-请务必保证 query 和 id 的全局唯一性,两者都不可以重复。如果提交到 fofax, fofax 内部会有自己的编号。如果只是自己使用可以使用 fx-0000-xxxx 类似的编号。编号必须以 fx 开头。
+请务必保证 query 和 id 的全局唯一性,两者都不可以重复。如果提交到 FoFax, FoFaX 内部会有自己的编号。如果只是自己使用可以使用 fx-0000-xxxx 类似的编号。编号必须以 `fx` 开头。
 :::
-## 移动文件到`fxrules`
+
+## 移动文件到 `fxrules`
 
 在编写完成后请放在 `fxrules` 所在的目录。
 
 ::: warning
-fxrules 目录有两种方法可以得知。一种是查看配置文件中 fxdir 所在的目录。一种是通过 `fofax -h`
+`fxrules` 目录有两种方法可以得知。一种是查看配置文件中 `fxdir` 所在的目录。一种是通过 `fofax -h`
+
 ```shell
 FX GRAMMER:
    -fd, -fxdir string        fxdir directory (default "/Users/user/.config/fofax/fxrules")
 ```
-查看 fxdir 的默认项
+查看 `fxdir` 的默认项
 :::
 
-## 使用此 fx 查询规则
+## 使用此 Fx 查询规则
 
 ```
 fofax -q 'fx="redteam-info-gathering"' -fe -ffi

@@ -11,17 +11,17 @@ go install -v github.com/xiecat/fofax/cmd/fofax@latest
 
 ### MacOS/Linux
 
-将下载下来的 fofax 压缩包解压放在 `/usr/local/bin/` 目录下
+将下载下来的 FoFaX 压缩包解压放在 `/usr/local/bin/` 目录下
 
 ```console
 tar -zxvf ~/Downloads/fofax_v0.1.11_darwin_amd64.tar.gz -C /usr/local/bin/
 ```
 
-第一次运行 fofax 命令会自动生成一个配置文件，位于 `~/.config/fofax/fofax.yaml`。
+第一次运行 FoFaX 命令会自动生成一个配置文件，位于 `~/.config/fofax/fofax.yaml`。
 
 ### Windows
 
-解压压缩包，第一次运行 fofax.exe 会在同级目录下生成一个 fofax.yaml 的配置文件
+解压压缩包，第一次运行 fofax.exe 会在同级目录下生成一个 `fofax.yaml` 的配置文件
 
 ## 配置
 
@@ -54,7 +54,7 @@ fofakey: ***************
 
 ## 配置文件的读取顺序
 
-为了适应不同操作系统用户的使用习惯 fofax 对配置生成的进行了优化调整。主要分为两类操作系统。一类 windows 另一类就是 unix/linux 为主的操作系统。不论是 windows 还是非 win 配置文件查找顺序都是不变的分别为
+为了适应不同操作系统用户的使用习惯 FoFaX 对配置生成的进行了优化调整。主要分为两类操作系统。一类 windows 另一类就是 unix/linux 为主的操作系统。不论是 windows 还是非 win 配置文件查找顺序都是不变的分别为
 
 ```
 fofax.yaml  # 命令行当前目录
@@ -65,7 +65,7 @@ fofax.yaml  # 命令行当前目录
 
 ### windows
 
-大部分 windows 用户在使用工具的时候通常会把工具配置等放到一个单独的文件夹来使用。fofax 默认的也是这样。但是对于习惯配置文件和二进制分开的用户也有提供使用方法，如需要调整可以在家目录下创建`.config/fofax/`并把`fofax.yaml` 移动至此目录
+大部分 windows 用户在使用工具的时候通常会把工具配置等放到一个单独的文件夹来使用。FoFaX 默认的也是这样。但是对于习惯配置文件和二进制分开的用户也有提供使用方法，如需要调整可以在家目录下创建`.config/fofax/`并把`fofax.yaml` 移动至此目录
 
 ### unix/linux
 

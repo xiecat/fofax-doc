@@ -7,7 +7,7 @@
 ```
 
 ::: warning
--open 不会去请求 fofa api 进行查询
+-open 不会去请求 FoFa API 进行查询
 :::
 <!-- ![openinbrowser](./docs/images/openinbrowser.gif) -->
 ![openinbrowser.gif](https://s2.loli.net/2021/12/25/2lvs4njYEUNmkLS.gif)

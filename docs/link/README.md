@@ -2,7 +2,7 @@
 
 欢迎大家来提供联动案例。
 
-## [httpx](https://github.com/projectdiscovery/httpx)
+## [Httpx](https://github.com/projectdiscovery/httpx)
 
 ```shell
 fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/migrate/export" -status-code -mc 200 -ms '{"Counsumers":[],"Routes'
@@ -10,7 +10,7 @@ fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/mig
 
 ![fofax_httpx](../.vuepress/public/fofax&httpx.png)
 
-## [nuclei](https://github.com/projectdiscovery/nuclei)
+## [Nuclei](https://github.com/projectdiscovery/nuclei)
 
 ```shell
 echo 'app="kubernetes"' | fofax | httpx | nuclei -t ~/nuclei-templates/misconfiguration/kubernetes/kubernetes-pods.yaml
@@ -30,7 +30,7 @@ echo 'fx=kubernetes' | fofax  -fe  -ffi | nuclei -t ~/nuclei-templates/misconfig
 
 ![fofax_nuclei](../.vuepress/public/fofax&nuclei.png)
 
-## [xray](https://github.com/chaitin/xray)
+## [Xray](https://github.com/chaitin/xray)
 
 > 感谢@荋丶 、@becivells两位师傅提供。
 ```shell
@@ -57,10 +57,33 @@ echo 'login' | fofax -fs 100  -ec -ffi | ./observer_ward_darwin --stdin
 
 ![fofax_dismap](../.vuepress/public/fofax&dismap.png)
 
-## [naabu](https://github.com/projectdiscovery/naabu)
+## [Naabu](https://github.com/projectdiscovery/naabu)
 
  ```bash
  echo '(title="职业学院" || title="大学" || title="职业技术学院" || title="学院") && country="CN"' | fofax -ff 'domain' -fs 10 | naabu
  ```
 
 ![fofax_naabu](../.vuepress/public/fofax&naabu.png)
+
+## [Nmap](https://nmap.org/)
+
+Linux/Win 下
+
+```shell
+nmap -iL <(echo 'app="APACHE-Solr"' | fofax -fs 10 -ff ip)
+```
+![Nmap](../.vuepress/public/nmap.png)
+Win 下使用的
+
+```shell
+echo 'app="APACHE-Solr"' | fofax -fs 1 -ff ip > targets.txt && nmap -iL targets.txt
+```
+![Nmap2](../.vuepress/public/nmap2.png)
+
+
+## [Jsubfinder](https://github.com/ThreatUnkown/jsubfinder)
+
+```
+.\fofax.exe -q 'app=\"Grafana\"' -ffi | jsubfinder.exe search
+```
+![jsubfinder](../.vuepress/public/jsubfinder.png)

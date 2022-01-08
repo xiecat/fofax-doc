@@ -2,14 +2,14 @@
 
 ## 参数介绍
 
-fofax 命令行参数可以分为四种配置项、输入源、过滤参数、输出格式
+FoFaX 命令行参数可以分为四种配置项、输入源、过滤参数、输出格式
 ```shell
 fofax [option] [input] [filter] [output]
 ```
 
 
 ```shell 
-fofax [[-email -key]/-config] [-q/-uc/-iu/-if/-fcf/-qf/-ucf/-iuf] [-fs/-i/-ec] [-ffi/-fto/-ff]
+fofax [[-email -key]/-config/-rit/-debug/-p/-sp/-update] [-q/-uc/-iu/-if/-fcf/-qf/-qx/-ucf/-iuf] [-fs/-i/-ec] [-ffi/-fto/-ff]
 ```
 这里先简单介绍一下。后续会分别介绍输入源、输出格式、过滤参数
 ```shell
@@ -22,6 +22,7 @@ CONFIGS:
    -key, -fofakey string       Fofa API Key 
    -p, -proxy string           proxy for http like http://127.0.0.1:8080
    -fofa-url string            Fofa url (default "https://fofa.so")
+   -rit, -request-interval-time int  Request interval time unit/Millisecond (default 500)
    -debug                      Debug mode
    -sp, -show-privacy          Debug mode Show Privacy
    -update                     Update fofax
@@ -73,7 +74,7 @@ OTHER OPTIONS:
 
 ## 基础查询
 
-有如下两种方式查询 `app="APACHE-Solr"`，不指定数量默认会输出100个 host，并且默认会对数据进行去重。
+有如下两种方式查询 `app="APACHE-Solr"`，不指定数量默认会输出 100 个 host，并且默认会对数据进行去重。
 
 ```console
 fofax -q 'app="APACHE-Solr"'
@@ -116,7 +117,7 @@ echo 'app="APACHE-Solr"' | fofax -fs 5
 ```
 
 ::: warning
-只输出了4条数据，是因为 fofax 自动对重复的数据进行了去重,高级会员大于 10000 条数据开始消耗 fofa币
+只输出了 4 条数据，是因为 FoFaX 自动对重复的数据进行了去重,高级会员大于 10000 条数据开始消耗 FoFa 币
 :::
 ## 排除查询
 

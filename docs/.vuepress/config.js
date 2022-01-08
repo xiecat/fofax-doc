@@ -1,6 +1,6 @@
 module.exports = {
-    title: 'fofax',
-    description: 'fofax 是一款简单、快速、可扩展规则，联动其他工具的命令行软件',
+    title: 'FoFaX',
+    description: 'FoFaX 是一款简单、快速、规则可扩展、联动其他工具的命令行软件',
     base: "/",
     themeConfig: {
         repo: 'xiecat/fofax',
@@ -34,6 +34,7 @@ module.exports = {
                 'input',
                 'filter',
                 'output',
+                'other',
                 'open',
             ],
             '/fx/': [
