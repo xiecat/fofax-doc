@@ -73,17 +73,11 @@ OTHER OPTIONS:
 ```
 
 ## 基础查询
-<<<<<<< HEAD
 
 ::: warning
-Windows 下如果查询出问题，请参考 [Windows 系统的使用问题](/faq/#windows-%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98)
+Windows 下如果查询出问题，请参考 [Windows 系统的使用问题](/faq/#windows-%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98)。
 :::
 
-=======
-::: warning
-windows 下如果查询出问题。请参考 [Windows 下的转义问题](/faq/#windows-%E4%B8%8B%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
-:::
->>>>>>> 03f69593a27fb90062ad408239b1104dce52485e
 有如下两种方式查询 `app="APACHE-Solr"`，不指定数量默认会输出 100 个 host，并且默认会对数据进行去重。
 
 ```console
