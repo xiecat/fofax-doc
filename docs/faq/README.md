@@ -66,9 +66,9 @@ fofax.exe -q 'app=\"APACHE-Solr\"' -fs 5
 
 一般有两种犯错情况。第一种是使用 Fx 语句未加 `-fe` 参数；第二种自己写的语句有问题，可以添加 `-open` 参数到 FoFa 网站上看看。
 
-## debug 信息
+## Debug 信息
 
-### 查看 debug 信息
+### 查看 Debug 信息
 
 ```bash
 fofax -q 'app="Grafana"' -debug

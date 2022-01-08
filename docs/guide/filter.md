@@ -4,7 +4,7 @@
 `-fs, -fetch-size int`
 这个过滤条件任何输入源都可以用。
 ::: warning
-高级会员当 size 大于10000时会消耗 1 FoFa 币
+高级会员当 size 大于 10000 时会消耗 1 FoFa 币
 :::
 
 ### 读取 2 行 fofa.so 下载的文件
