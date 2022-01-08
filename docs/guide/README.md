@@ -27,6 +27,6 @@ FoFaX 是 XieCat 正式发布的第二款安全工具，我们和大多数用户
 
 我们欢迎每个人参与进来，一起打造一个自己的 FoFa 语法库。除了提交语法之外，更多的第三方工具联动您也可以参与进来，将联动方式提交给我们。最后如果有什么有趣的新功能或者新需求，也都可以通过提 issues/Xiecat 公众号后台提交给 Xiecat 团队，我们经过评估之后下个版本就可能实现你要的功能。
 
-Stargazers
+## Stargazers
 
 [![Stargazers over time](https://starchart.cc/xiecat/fofax.svg)](https://starchart.cc/xiecat/fofax)

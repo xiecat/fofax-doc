@@ -4,7 +4,7 @@
 
 ### Windows
 
-Windows系统下，首次运行 `fofax.exe`，会在当前同级目录下生成配置文件 `fofax.yaml` 和 Fx 规则配置文件 `fxrules` 文件夹。同级目录下的配置文件优先读取。
+Windows 系统下，首次运行 `fofax.exe`，会在当前同级目录下生成配置文件 `fofax.yaml` 和 Fx 规则配置文件 `fxrules` 文件夹。同级目录下的配置文件优先读取。
 
 如果同级目录下没有配置文件，则会去读取用户家目录下的 `.config/fofax/` 目录中的配置文件：
 
@@ -28,7 +28,25 @@ fofax
 2021/12/23 21:21:28 [SUCC] create config file /Users/user/.config/fofax/fofax.yaml. please modify and use
 ```
 
-## Windows 下的转义问题
+## Windows 系统的使用问题
+
+### 通过管道查询
+
+Windows上通过管道进行查询，这种方式是优先推荐使用的，因为无需任何转义。
+
+```cmd
+echo app="APACHE-Solr" | fofax.exe -fs 3
+```
+
+![Windows_cmd_echo](../.vuepress/public/windows-cmd-echo.png)
+
+```powershell
+echo 'app="APACHE-Solr"' | fofax.exe -fs 5
+```
+
+![Windows_powershell_echo](../.vuepress/public/windows-ps-echo.png)
+
+### 通过参数指定查询
 
 在 Windows 下使用一定要注意转义，Windows 终端中输入 `"` 不加转义会消失。
 
@@ -66,9 +84,9 @@ fofax.exe -q 'app=\"APACHE-Solr\"' -fs 5
 
 一般有两种犯错情况。第一种是使用 Fx 语句未加 `-fe` 参数；第二种自己写的语句有问题，可以添加 `-open` 参数到 FoFa 网站上看看。
 
-## debug 信息
+## Debug 信息
 
-### 查看 debug 信息
+### 查看 Debug 信息
 
 ```bash
 fofax -q 'app="Grafana"' -debug

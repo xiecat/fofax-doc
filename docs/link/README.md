@@ -40,7 +40,8 @@ echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 100 -e -
 ./xray --log-level fatal ws --plugins shiro --uf <(echo 'header="rememberme=deleteMe" || header="shiroCookie"' | fofax -fs 10 -ffi -ec )
 ```
 ![fofax_xray](../.vuepress/public/fofax&xray.png)
-## [observer_ward](https://github.com/0x727/ObserverWard_0x727)
+
+## [Observer_ward](https://github.com/0x727/ObserverWard_0x727)
 
 > 感谢[@0x727](https://github.com/0x727)开源团队提供。
 
@@ -49,7 +50,7 @@ echo 'login' | fofax -fs 100  -ec -ffi | ./observer_ward_darwin --stdin
 ```
 ![fofax_observer_ward](../.vuepress/public/fofax&observer_ward.png)
 
-## [dismap](https://github.com/zhzyker/dismap/)
+## [Dismap](https://github.com/zhzyker/dismap/)
 
 ```
 ./dismap -file <(echo 'title="login"' | fofax -fs 10 -ffi)
@@ -67,13 +68,14 @@ echo 'login' | fofax -fs 100  -ec -ffi | ./observer_ward_darwin --stdin
 
 ## [Nmap](https://nmap.org/)
 
-Linux/Win 下
+#### Linux/macOS
 
 ```shell
 nmap -iL <(echo 'app="APACHE-Solr"' | fofax -fs 10 -ff ip)
 ```
 ![Nmap](../.vuepress/public/nmap.png)
-Win 下使用的
+
+#### Windows
 
 ```shell
 echo 'app="APACHE-Solr"' | fofax -fs 1 -ff ip > targets.txt && nmap -iL targets.txt

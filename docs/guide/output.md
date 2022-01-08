@@ -50,7 +50,7 @@ http://139.224.146.217:8080 []
    -fetch-fields-split string    Specify characters to split data in different fields (default ",")
 ```
 
-这里可以指定需要输出的字段和字段分隔符号目前(2020-01-01) FoFa 支持的字段为
+这里可以指定需要输出的字段和字段分隔符号目前(2020-01-01) FoFa 支持的字段为：
 ```
 host title ip domain port country province city country_name header server protocol banner cert isp as_number as_organization latitude longitude structinfo icp fid cname type jarm
 ```

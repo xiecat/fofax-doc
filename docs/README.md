@@ -10,5 +10,5 @@ features:
   details: 无论是普通查询、icon、网站证书在查询过程可以随时用浏览器打开 FoFa 相应网页
 - title: 联动其他工具
   details: 支持管道文件命令行参数输入，还可以对接其他工具如 Xray、Httpx、Nuclei。  
-footer:  Copyright © 2021 xiecat
+footer:  Copyright © 2022 xiecat
 ---

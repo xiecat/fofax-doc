@@ -74,6 +74,10 @@ OTHER OPTIONS:
 
 ## 基础查询
 
+::: warning
+Windows 下如果查询出问题，请参考 [Windows 系统的使用问题](/faq/#windows-%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%BF%E7%94%A8%E9%97%AE%E9%A2%98)
+:::
+
 有如下两种方式查询 `app="APACHE-Solr"`，不指定数量默认会输出 100 个 host，并且默认会对数据进行去重。
 
 ```console
@@ -119,6 +123,7 @@ echo 'app="APACHE-Solr"' | fofax -fs 5
 ::: warning
 只输出了 4 条数据，是因为 FoFaX 自动对重复的数据进行了去重,高级会员大于 10000 条数据开始消耗 FoFa 币
 :::
+
 ## 排除查询
 
 添加 `-i` 参数，其中包含蜜罐的数据。
