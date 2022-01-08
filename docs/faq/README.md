@@ -8,7 +8,7 @@ Windows系统下，首次运行`fofax.exe`，会在当前同级目录下生成�
 
 如果同级目录下没有配置文件，则会去读取用户家目录下的`.config/fofax/`目录中的配置文件：
 
-![Windows_conf](../.vuepress/public/Windows-conf.png)
+![Windows_conf](../.vuepress/public/windows-conf.png)
 
 ### Linux/macOS
 
