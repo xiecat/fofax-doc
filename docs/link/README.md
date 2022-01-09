@@ -89,3 +89,12 @@ echo 'app="APACHE-Solr"' | fofax -fs 1 -ff ip > targets.txt && nmap -iL targets.
 .\fofax.exe -q 'app=\"Grafana\"' -ffi | jsubfinder.exe search
 ```
 ![jsubfinder](../.vuepress/public/jsubfinder.png)
+
+## [sylas](https://github.com/xiecat/sylas)
+```shell
+sylas -q 'app="APACHE-Solr"'|fofax -ff "host,lastupdatetime" -fs 10000 
+```
+![sylas](../.vuepress/public/sylas.png)
+::: warning
+-fs 请务必设置为 10000
+:::
