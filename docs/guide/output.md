@@ -60,7 +60,8 @@ host title ip domain port country province city country_name header server proto
 
 ### 模拟用 FoFa 币 下载 csv 文件
 ```shell
-fofax -q 'apache' -ff "host,lastupdatetime" -fs 10000 >apache.csv
+echo "host,lastupdatetime">apache.csv
+fofax -q 'apache' -ff "host,lastupdatetime" -fs 10000 >> apache.csv
 ```
 ::: warning
 高级会员大于 10000 条数据开始消耗 FoFa 币
