@@ -1,7 +1,15 @@
 # 其他配置
 
 
+## 静默输出
+输出过程中加上 `-silent` 抑制日志输出
+```
+-silent         Silent Output
+```
 
+```shell
+echo 'app="APACHE-Solr"' | fofax -fs 100 -silent
+```
 ## 调整请求速率
 
 ```
