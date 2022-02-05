@@ -32,7 +32,7 @@ fofax
 
 ### 通过管道查询
 
-Windows上通过管道进行查询，这种方式是优先推荐使用的，因为无需任何转义。
+Windows上通过管道进行查询，这种方式是**优先推荐**使用的，因为无需任何转义。
 
 ```cmd
 echo app="APACHE-Solr" | fofax.exe -fs 3
@@ -48,7 +48,7 @@ echo 'app="APACHE-Solr"' | fofax.exe -fs 5
 
 ### 通过参数指定查询
 
-在 Windows 下使用一定要注意转义，Windows 终端中输入 `"` 不加转义会消失。
+在 Windows 下使用一定要注意转义，Windows 终端中输入 `"` 不加转义会消失，所以这种查询方式**稍显麻烦**。
 
 ```shell
 fofax.exe -q 'app="APACHE-Solr"' 		# 输入的内容
@@ -72,6 +72,22 @@ fofax.exe -q 'app=\"APACHE-Solr\"' -fs 5
 ```
 
 ![Windows_powershell](../.vuepress/public/windows-powershell.png)
+
+### 复杂的查询
+
+当查询语句中存在一些特殊符号（例如 `&` 或者 `|`），此时在原生 CMD 终端中无法完成正常的查询。但在 PowerShell 中可以通过管道正常查询。
+
+```powershell
+echo 'app="APACHE-Solr" && country="CN"' | .\fofax.exe -fs 5
+```
+
+![complex_powershell](../.vuepress/public/complex-ps.png)
+
+```powershell
+echo 'app="APACHE-Solr" && (country="FR" || country="CN")' | .\fofax.exe -fs 5
+```
+
+![complex_powershell_2](../.vuepress/public/complex-ps-2.png)
 
 ## 提示语法错误
 
