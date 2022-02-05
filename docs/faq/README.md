@@ -89,6 +89,14 @@ echo 'app="APACHE-Solr" && (country="FR" || country="CN")' | .\fofax.exe -fs 5
 
 ![complex_powershell_2](../.vuepress/public/complex-ps-2.png)
 
+除此之外，如果有更复杂的查询语句，可以考虑使用文本查询的方式。
+
+```powershell
+.\fofax.exe -qf .\query.txt -fs 5
+```
+
+![complex_qf](../.vuepress/public/complex-qf.png)
+
 ## 提示语法错误
 
 ```bash
