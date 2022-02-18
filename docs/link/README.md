@@ -2,7 +2,7 @@
 
 欢迎大家来提供联动案例。
 
-## [Httpx](https://github.com/projectdiscovery/httpx) - http 快速验活
+## [httpX](https://github.com/projectdiscovery/httpx) - http 快速验活
 
 ```shell
 fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/migrate/export" -status-code -mc 200 -ms '{"Counsumers":[],"Routes'

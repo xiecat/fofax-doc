@@ -3,7 +3,9 @@
 ## 获取更多 fofa 数据
 
 :sailboat: 需要工具 [sylas](https://github.com/xiecat/sylas)
-
+::: warning
+因为 FoFa 改版此工具暂时无法使用。等改版完成后进行升级
+:::
 ```shell
 sylas -q 'app="APACHE-Solr"'|fofax -ff "host,lastupdatetime" -fs 10000 
 ```
@@ -26,7 +28,7 @@ sylas -q 'app="APACHE-Solr"'|fofax -ff "host,lastupdatetime" -fs 10000
    echo 'apache' | fofax|httpx -title
    ```
 
-## 模拟在 fofa.so 上导出文件
+## 模拟在 fofa.info 上导出文件
 
 ```shell
 echo "host,lastupdatetime">solr.csv
@@ -36,7 +38,7 @@ echo 'app="APACHE-Solr"'|fofax -ff "host,lastupdatetime" -fs 10000 >>solr.csv
 配合 sylas 可以导出更多数据 
 :::
 
-## 读取 fofa.so 上导出的文件
+## 读取 fofa.info 上导出的文件
 
 ```shell
 fofax -fcf solr.csv -fs 10 
