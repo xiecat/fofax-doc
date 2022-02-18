@@ -3,7 +3,7 @@
 
 点击 [Releases下载链接](https://github.com/xiecat/fofax/releases) ，按照自己的系统架构选择相应的发行版本下载。
 
-或者使用 go 进行命令行安装。
+或者使用 Go 进行命令行安装。
 
 ```shell
 go install -v github.com/xiecat/fofax/cmd/fofax@latest
@@ -30,8 +30,8 @@ tar -zxvf ~/Downloads/fofax_v0.1.26_darwin_amd64.tar.gz -C /usr/local/bin/
 ### 环境变量配置
 
 ```
-FOFA_EMAIL=xxx@xxx.xx
-FOFA_KEY=xxxxxxxxxxxxxxxxxxxxxxxxx
+export FOFA_EMAIL=xxx@xxx.xx
+export FOFA_KEY=xxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 环境变量配置后 `fofax -h` 会看到默认参数中有此值
@@ -65,11 +65,11 @@ fofax.yaml  								# 命令行当前同级目录
 
 ### Windows
 
-大部分 windows 用户在使用工具的时候通常会把工具配置等放到一个单独的文件夹来使用。FoFaX 默认的也是这样。但是对于习惯配置文件和二进制分开的用户也有提供使用方法，如需要调整可以在家目录下创建`.config/fofax/`并把`fofax.yaml` 移动至此目录。
+大部分 Windows 用户在使用工具的时候通常会把工具配置等放到一个单独的文件夹来使用。FoFaX 默认的也是这样。但是对于习惯配置文件和二进制分开的用户也有提供使用方法，如需要调整可以在家目录下创建`.config/fofax/`并把`fofax.yaml` 移动至此目录。
 
 ### Linux/macOS
 
-这类用户受 linux 等影响会把配置文件和二进制文件分开。程序生成的默认配置文件路径为 `~/.config/fofax/fofax.yaml` 。如果当前目录有 `fofax.yaml`  会优先读取 `fofax.yaml` 。
+这类用户受 Linux 等影响会把配置文件和二进制文件分开。程序生成的默认配置文件路径为 `~/.config/fofax/fofax.yaml` 。如果当前目录有 `fofax.yaml`  会优先读取 `fofax.yaml` 。
 
 ### 配置文件排查
 

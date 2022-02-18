@@ -62,7 +62,7 @@ fofax -fofa-url=https://fofa.so -q 'app="APACHE-Solr"'  -fs 10 -e
 -sp, -show-privacy                Debug mode Show Privacy
 ```
 
-开启 debug 模式显示 email 和 key。
+开启 Debug 模式显示 email 和 key。
 
 ```
 fofax -q 'app="APACHE-Solr"'  -fs 10 -debug -sp

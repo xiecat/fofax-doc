@@ -66,7 +66,7 @@ fofax -qf query.txt -fe -fs 10 -e
 fofax -qx 'Jupyter'
 ```
 
-##   icon 查询
+##   Icon 查询
 
 ### 从 URL 中查询
 
@@ -74,14 +74,14 @@ fofax -qx 'Jupyter'
 fofax -iu https://www.baidu.com/favicon.ico -fs 5
 ```
 
-### 直接计算本地 icon 文件进行查询
+### 直接计算本地 Icon 文件进行查询
 
 ```
 wget https://www.baidu.com/favicon.ico
 fofax -if favicon.ico -fs 5
 ```
 
-### 从 icon URL 文件列表中计算
+### 从 Icon URL 文件列表中计算
 
 ```
 fofax -iuf icon_url.txt 
@@ -101,7 +101,7 @@ fofax -fs 5 -uc https://www.baidu.com/
 fofax -ucf cert_url.txt 
 ```
 
-## 从 fofa.so 导出的数据中读取
+## 从 fofa.info 导出的数据中读取
 
 ```
 fofax -fcf test.csv  -fs 2 
