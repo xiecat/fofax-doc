@@ -97,6 +97,12 @@ echo 'app="APACHE-Solr" && (country="FR" || country="CN")' | .\fofax.exe -fs 5
 
 ![complex_qf](../.vuepress/public/complex-qf.png)
 
+#### 复杂案例- `@Mr.hao` 提供
+
+```shell
+fofax -q "fx=\"fx-2021-1035\" && title=\"中国\"" -debug -fs 5 -fto -fe
+```
+
 ## 提示语法错误
 
 ```bash
