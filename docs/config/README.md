@@ -18,7 +18,7 @@ Usage:
 
 Flags:
 CONFIGS:
-   -email, -fofa-email string  Fofa API Email (default "becivells@qq.com")
+   -email, -fofa-email string  Fofa API Email (default "be****s@qq.com")
    -key, -fofakey string       Fofa API Key (default "22*****************7657")
    -p, -proxy string           proxy for http like http://127.0.0.1:8080
    -fofa-url string            Fofa url (default "https://fofa.so")
