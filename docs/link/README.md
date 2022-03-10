@@ -2,13 +2,20 @@
 
 欢迎大家来提供联动案例。
 
-## [httpX](https://github.com/projectdiscovery/httpx) - http 快速验活
+## [httpX](https://github.com/projectdiscovery/httpx) - http 快速验证 apisix 漏洞
 
 ```shell
 fofax -q 'title="Apache APISIX Dashboard"' -ffi | httpx -path "/apisix/admin/migrate/export" -status-code -mc 200 -ms '{"Counsumers":[],"Routes'
 ```
 
 ![fofax_httpx](../.vuepress/public/fofax&httpx.png)
+
+
+### 快速验证存活并展示标题
+```
+fofax  -q 'title="Apache APISIX Dashboard"' -ffi|httpx -title
+```
+
 
 ## [Nuclei](https://github.com/projectdiscovery/nuclei) - 简单快速扫描工具
 
