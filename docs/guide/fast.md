@@ -21,8 +21,9 @@ CONFIGS:
    -email, -fofa-email string  Fofa API Email 
    -key, -fofakey string       Fofa API Key 
    -p, -proxy string           proxy for http like http://127.0.0.1:8080
-   -fofa-url string            Fofa url (default "https://fofa.so")
+   -fofa-url string            Fofa url (default "https://fofa.info")
    -rit, -request-interval-time int  Request interval time unit/Millisecond (default 500)
+   -coin                             Get over 10,000 data with fofa coins
    -debug                      Debug mode
    -sp, -show-privacy          Debug mode Show Privacy
    -update                     Update fofax
@@ -121,7 +122,8 @@ echo 'app="APACHE-Solr"' | fofax -fs 5
 ```
 
 ::: warning
-只输出了 4 条数据，是因为 FoFaX 自动对重复的数据进行了去重,高级会员大于 10000 条数据开始消耗 FoFa 币
+只输出了 4 条数据，是因为 FoFaX 自动对重复的数据进行了去重,高级会员大于 10000 条数据并且打开 `-coin` 开关会消耗 FoFa 币。
+为了最大化利用 fofa 币，当超过一万条后不论写多少最终只入不舍获取数据。比如 `-fs 10001` 实际会变成 `-fs 20000`
 :::
 
 ## 排除查询

@@ -64,7 +64,8 @@ echo "host,lastupdatetime">apache.csv
 fofax -q 'apache' -ff "host,lastupdatetime" -fs 10000 >> apache.csv
 ```
 ::: warning
-高级会员大于 10000 条数据开始消耗 FoFa 币
+高级会员大于 10000 条数据并且打开 `-coin` 开关会消耗 FoFa 币。
+为了最大化利用 fofa 币，当超过一万条后不论写多少最终只入不舍获取数据。比如 `-fs 10001` 实际会变成 `-fs 20000`
 :::
 
 ### 联动 Naabu 
