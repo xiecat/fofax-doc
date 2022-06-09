@@ -33,7 +33,7 @@ FILTERS:
    -fs, -fetch-size int      The maximum number of query (default 100)
    -e, -exclude              Exclude the honeypot.
    -i, -include              Include the honeypot.
-   -od, -old-data            Include the Historic data (old Data).
+   -od, -full            Include the Historic data (old Data).
    -ec, -exclude-country-cn  Exclude CN.
 
 OUTPUT FORMAT:

@@ -44,9 +44,9 @@ echo 'app="APACHE-Solr"' | fofax
 :::
 
 ## 获取历史数据
-
+-od, -full          Include the Historic data (old Data).
 ```shell
-echo 'app="APACHE-Solr"' | fofax -od
+echo 'app="APACHE-Solr"' | fofax -full
 ```
 
 ::: warning
