@@ -43,6 +43,15 @@ echo 'app="APACHE-Solr"' | fofax
 此过滤条件 FoFa 币下载的文件无法使用，其他都可以使用
 :::
 
+## 获取历史数据
+
+```shell
+echo 'app="APACHE-Solr"' | fofax -od
+```
+
+::: warning
+获取 fofa 全部的数据。默认是一年内的数据
+:::
 ## 输入源过滤
 `-ubq, -unique-by-query    De-duplicate the input source`
 当输入源中包含多个数据，可以使用 `-ubq` 去除重复的

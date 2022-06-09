@@ -6,7 +6,7 @@
   "author": "becivells <732903873@qq.com>",
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^0.14.11"
+    "vuepress": "^1.9.7"
   },
   "scripts": {
     "docs:dev": "vuepress dev docs",
